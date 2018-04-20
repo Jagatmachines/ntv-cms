@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 /* import logo from './logo.svg'; */
-import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import RoutingComponent from './routes';
+import './components/firebase/firebase';
+import withAuthentication from './components/firebase/withAuthentication'
 
 class App extends Component {
   render() {
@@ -12,4 +13,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withAuthentication(App);
